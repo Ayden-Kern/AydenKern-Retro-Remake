@@ -9,6 +9,8 @@ public class testPM : MonoBehaviour
     public string menuLabel;                                // Strings Rep WORDS/PHRASES/TEXT
     public bool enemtyIsDead, isGrounded, isPlayerDead;     // Bools rep Values that are TRUE OR FALSE
     public Vector2 currentMovement, platformPosition, playerPostition, rotation; // Vector2's rep 2D DECIMALS
+    private Rigidbody2D rb;
+
 
     // Start is called before the first frame update
     void Start()
