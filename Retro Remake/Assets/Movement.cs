@@ -6,7 +6,7 @@ using static UnityEngine.RuleTile.TilingRuleOutput;
 public class Movement : MonoBehaviour
 {
     public KeyCode left = KeyCode.A, right = KeyCode.D, up = KeyCode.W, down = KeyCode.S;
-    public float speed = 10, jumpheight = 15;
+    public float speed = 10, jumpheight = 15, accelerate = 1;
     public KeyCode jump = KeyCode.W;
     private Rigidbody2D _rb;
     [Header("Raycast")]
