@@ -6,7 +6,7 @@ using static UnityEngine.RuleTile.TilingRuleOutput;
 public class Movement : MonoBehaviour
 {
     public KeyCode left = KeyCode.A, right = KeyCode.D, up = KeyCode.W, down = KeyCode.S;
-    public float speed = 10, jumpheight = 15, accelerate = 1;
+    public float speed = 10, jumpheight = 15, MaxSpeed = 30;
     public KeyCode jump = KeyCode.W;
     private Rigidbody2D _rb;
     [Header("Raycast")]
@@ -29,12 +29,12 @@ public class Movement : MonoBehaviour
     {
         if (Input.GetKey(left))
         {
-            _rb.velocity = Vector2.left * speed;
+            _rb.AddForce(Vector2.left * speed * Time.deltaTime);
         }
         if (Input.GetKey(right))
         {
-            _rb.velocity = Vector2.right * speed;
-        }
+            _rb.AddForce(Vector2.right * speed * Time.deltaTime);
+        } 
         if (Input.GetKey(up))
         {
             _rb.velocity = Vector2.up * speed;
