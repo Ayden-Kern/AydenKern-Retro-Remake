@@ -43,6 +43,11 @@ public class Movement : MonoBehaviour
         {
             _rb.velocity = Vector2.down * speed;
         }
+        if (_rb.velocity.x > MaxSpeed)
+            _rb.velocity = new Vector2 (MaxSpeed, _rb.velocity.y);
+        if (_rb.velocity.x > MaxSpeed)
+            _rb.velocity = new Vector2(-MaxSpeed, _rb.velocity.y);
+
 
         //orgin position * in the down dir downRange, direction, range
         bool ray = Physics2D.Raycast(transform.position * (Vector2.down * downRange), Vector2.down, dist);
