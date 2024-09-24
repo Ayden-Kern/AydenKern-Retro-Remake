@@ -39,7 +39,7 @@ public class Movement : MonoBehaviour
         {
             _rb.velocity = Vector2.up * speed;
         }
-        if (Input.GetKey(down))
+        if (Input.GetKeyDown(down))
         {
             _rb.velocity = Vector2.down * speed;
         }
@@ -50,7 +50,8 @@ public class Movement : MonoBehaviour
 
 
         //orgin position * in the down dir downRange, direction, range
-        bool ray = Physics2D.Raycast(transform.position * (Vector2.down * downRange), Vector2.down, dist);
+        bool ray = Physics2D.Raycast(transform.position + (Vector3.down * downRange), Vector2.down, dist);
+        //bool ray = Physics2D.BoxCast(transform.position *())
 
         //print(ray);
 
@@ -62,5 +63,10 @@ public class Movement : MonoBehaviour
         {
             _rb.velocity = new(_rb.velocity.x, _rb.velocity.y / 2);
         }
+    }
+
+    private void OnDrawGizmos()
+    {
+        Gizmos.DrawLine(transform.position + (Vector3.down * downRange), transform.position + Vector3.down * dist);
     }
 }
