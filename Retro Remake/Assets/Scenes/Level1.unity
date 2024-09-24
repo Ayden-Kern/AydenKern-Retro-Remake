@@ -1115,6 +1115,11 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 16
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &538797423 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 2325675511101085066, guid: 0140118d5e57776429c4646821b2e520, type: 3}
+  m_PrefabInstance: {fileID: 1118455416}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &612582700
 GameObject:
   m_ObjectHideFlags: 0
@@ -1760,7 +1765,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2325675511101085061, guid: 0140118d5e57776429c4646821b2e520, type: 3}
       propertyPath: down
-      value: 115
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2325675511101085061, guid: 0140118d5e57776429c4646821b2e520, type: 3}
       propertyPath: speed
@@ -1876,13 +1881,14 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2325675511101085067, guid: 0140118d5e57776429c4646821b2e520, type: 3}
       propertyPath: m_SpriteTilingProperty.oldSize.x
-      value: 0.54
+      value: 0.6
       objectReference: {fileID: 0}
     - target: {fileID: 2325675511101085067, guid: 0140118d5e57776429c4646821b2e520, type: 3}
       propertyPath: m_SpriteTilingProperty.oldSize.y
-      value: 0.78
+      value: 0.8
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 2325675511101085067, guid: 0140118d5e57776429c4646821b2e520, type: 3}
     m_AddedGameObjects:
     - targetCorrespondingSourceObject: {fileID: 2325675511101085063, guid: 0140118d5e57776429c4646821b2e520, type: 3}
       insertIndex: -1
@@ -2217,6 +2223,8 @@ GameObject:
   m_Component:
   - component: {fileID: 1226564289}
   - component: {fileID: 1226564288}
+  - component: {fileID: 1226564291}
+  - component: {fileID: 1226564290}
   m_Layer: 0
   m_Name: green hill zone sprite sheet_14 (1)
   m_TagString: Untagged
@@ -2291,6 +2299,61 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 29
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!19719996 &1226564290
+TilemapCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1226564287}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_MaximumTileChangeCount: 1000
+  m_ExtrusionFactor: 0
+  m_UseDelaunayMesh: 0
+--- !u!1839735485 &1226564291
+Tilemap:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1226564287}
+  m_Enabled: 1
+  m_Tiles: {}
+  m_AnimatedTiles: {}
+  m_TileAssetArray: []
+  m_TileSpriteArray: []
+  m_TileMatrixArray: []
+  m_TileColorArray: []
+  m_TileObjectToInstantiateArray: []
+  m_AnimationFrameRate: 1
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Origin: {x: 0, y: 0, z: 0}
+  m_Size: {x: 0, y: 0, z: 1}
+  m_TileAnchor: {x: 0.5, y: 0.5, z: 0}
+  m_TileOrientation: 0
+  m_TileOrientationMatrix:
+    e00: 1
+    e01: 0
+    e02: 0
+    e03: 0
+    e10: 0
+    e11: 1
+    e12: 0
+    e13: 0
+    e20: 0
+    e21: 0
+    e22: 1
+    e23: 0
+    e30: 0
+    e31: 0
+    e32: 0
+    e33: 1
 --- !u!1 &1228688566
 GameObject:
   m_ObjectHideFlags: 0
@@ -2922,6 +2985,22 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 2325675511101085063, guid: 0140118d5e57776429c4646821b2e520, type: 3}
   m_PrefabInstance: {fileID: 1118455416}
   m_PrefabAsset: {fileID: 0}
+--- !u!70 &1393036195
+CapsuleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 538797423}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: -0.000000059604645, y: 0}
+  m_Size: {x: 0.59999996, y: 0.79999995}
+  m_Direction: 0
 --- !u!1 &1429264342
 GameObject:
   m_ObjectHideFlags: 0
@@ -3057,6 +3136,8 @@ GameObject:
   m_Component:
   - component: {fileID: 1431952927}
   - component: {fileID: 1431952926}
+  - component: {fileID: 1431952929}
+  - component: {fileID: 1431952928}
   m_Layer: 0
   m_Name: green hill zone sprite sheet_149 (1)
   m_TagString: Untagged
@@ -3131,6 +3212,61 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 28
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!19719996 &1431952928
+TilemapCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1431952925}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_MaximumTileChangeCount: 1000
+  m_ExtrusionFactor: 0
+  m_UseDelaunayMesh: 0
+--- !u!1839735485 &1431952929
+Tilemap:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1431952925}
+  m_Enabled: 1
+  m_Tiles: {}
+  m_AnimatedTiles: {}
+  m_TileAssetArray: []
+  m_TileSpriteArray: []
+  m_TileMatrixArray: []
+  m_TileColorArray: []
+  m_TileObjectToInstantiateArray: []
+  m_AnimationFrameRate: 1
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Origin: {x: 0, y: 0, z: 0}
+  m_Size: {x: 0, y: 0, z: 1}
+  m_TileAnchor: {x: 0.5, y: 0.5, z: 0}
+  m_TileOrientation: 0
+  m_TileOrientationMatrix:
+    e00: 1
+    e01: 0
+    e02: 0
+    e03: 0
+    e10: 0
+    e11: 1
+    e12: 0
+    e13: 0
+    e20: 0
+    e21: 0
+    e22: 1
+    e23: 0
+    e30: 0
+    e31: 0
+    e32: 0
+    e33: 1
 --- !u!1 &1470924769
 GameObject:
   m_ObjectHideFlags: 0
