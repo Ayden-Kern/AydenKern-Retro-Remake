@@ -32,4 +32,8 @@ public class SceneLoader : MonoBehaviour
     {
         SceneManager.LoadScene("Settings");
     }
+    public void LoadMenu()
+    {
+        SceneManager.LoadScene("Main_Menu");
+    }
 }

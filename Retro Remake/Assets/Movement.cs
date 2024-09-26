@@ -9,6 +9,8 @@ public class Movement : MonoBehaviour
     public float speed = 10, jumpheight = 15, MaxSpeed = 30;
     public KeyCode jump = KeyCode.W;
     private Rigidbody2D _rb;
+    private Animator _animator;
+    private SpriteRenderer _spriteRenderer;
     [Header("Raycast")]
 
     [SerializeField] float dist; //raycast range
@@ -20,8 +22,8 @@ public class Movement : MonoBehaviour
     private void Start()
     {
         _rb = GetComponent<Rigidbody2D>();
-
-        dist = transform.localScale.y; //set dist
+        _animator = GetComponent<Animator>();
+        _spriteRenderer = GetComponent<SpriteRenderer>();
     }
 
     // Update is called once per frame
@@ -30,11 +32,19 @@ public class Movement : MonoBehaviour
         if (Input.GetKey(left))
         {
             _rb.AddForce(Vector2.left * speed * Time.deltaTime);
+            _animator.SetBool("Is_moving", true);
+            _spriteRenderer.flipX = true;
         }
-        if (Input.GetKey(right))
+        else if (Input.GetKey(right))
         {
             _rb.AddForce(Vector2.right * speed * Time.deltaTime);
-        } 
+            _animator.SetBool("Is_moving", true);
+            _spriteRenderer.flipX = false;
+        }
+        else
+        {
+            _animator.SetBool("Is_moving", false);
+        }
         if (Input.GetKey(up))
         {
             _rb.velocity = Vector2.up * speed;

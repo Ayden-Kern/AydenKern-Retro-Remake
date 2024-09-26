@@ -34,7 +34,7 @@ TextureImporter:
   maxTextureSize: 2048
   textureSettings:
     serializedVersion: 2
-    filterMode: 1
+    filterMode: 0
     aniso: 1
     mipBias: 0
     wrapU: 1
@@ -4761,7 +4761,7 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      green hill zone sprite sheet_99: -881815590
+      green hill zone sprite sheet_224: 2003280562
       green hill zone sprite sheet_172: -2043198902
       green hill zone sprite sheet_12: 1398712529
       green hill zone sprite sheet_188: -802279273
@@ -4785,16 +4785,16 @@ TextureImporter:
       green hill zone sprite sheet_254: 609237839
       green hill zone sprite sheet_145: 272483446
       green hill zone sprite sheet_210: -372664262
-      green hill zone sprite sheet_187: 1414877304
       green hill zone sprite sheet_9: -1847950925
+      green hill zone sprite sheet_134: 247915857
       green hill zone sprite sheet_144: 126415046
-      green hill zone sprite sheet_151: 784296375
+      green hill zone sprite sheet_187: 1414877304
       green hill zone sprite sheet_56: -1443288065
       green hill zone sprite sheet_250: -933018149
-      green hill zone sprite sheet_134: 247915857
       green hill zone sprite sheet_30: 292269804
       green hill zone sprite sheet_5: -1209377951
       green hill zone sprite sheet_219: -1343056735
+      green hill zone sprite sheet_151: 784296375
       green hill zone sprite sheet_251: 197225438
       green hill zone sprite sheet_166: -41390707
       green hill zone sprite sheet_112: -1385741646
@@ -5013,7 +5013,7 @@ TextureImporter:
       green hill zone sprite sheet_253: -630141525
       green hill zone sprite sheet_179: 2142442241
       green hill zone sprite sheet_49: -1078196804
-      green hill zone sprite sheet_224: 2003280562
+      green hill zone sprite sheet_99: -881815590
       green hill zone sprite sheet_22: -1011074255
       green hill zone sprite sheet_97: -2037459995
   spritePackingTag: 
