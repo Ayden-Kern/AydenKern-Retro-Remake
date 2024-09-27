@@ -57,6 +57,7 @@ public class Movement : MonoBehaviour
             _rb.velocity = new Vector2 (MaxSpeed, _rb.velocity.y);
         if (_rb.velocity.x > MaxSpeed)
             _rb.velocity = new Vector2(-MaxSpeed, _rb.velocity.y);
+        _animator.SetFloat("speed", Mathf.Abs(_rb.velocity.x));
 
 
         //orgin position * in the down dir downRange, direction, range
@@ -67,7 +68,9 @@ public class Movement : MonoBehaviour
 
         if (ray && Input.GetKeyDown(jump))
         {
-            _rb.velocity = Vector2.up * jumpheight;
+            _rb.AddForce(Vector2.up * jumpheight);
+            _animator.SetTrigger("Jumped");
+            _animator.SetBool("Is_moving", false);
         }
         if (Input.GetKeyUp(jump))
         {
