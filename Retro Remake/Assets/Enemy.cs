@@ -38,11 +38,11 @@ public class Enemy : MonoBehaviour
         Vector2 point = target.position - transform.position;
         if(target == pointB.transform)
         {
-            _rb.velocity = new Vector2(moveSpeed, 0);
+            _rb.velocity = new Vector2(moveSpeed, _rb.velocity.y);
         }
         else
         {
-            _rb.velocity = new Vector2(-moveSpeed, 0);
+            _rb.velocity = new Vector2(-moveSpeed, _rb.velocity.y);
         }
 
         if (Vector2.Distance(transform.position, target.position) < 0.5f && target == pointB.transform)
