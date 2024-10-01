@@ -15,6 +15,7 @@ public class Movement : MonoBehaviour
 
     [SerializeField] float dist; //raycast range
     [SerializeField] float downRange = -0.75f; //offset
+    [SerializeField] float health, maxHealth = 1;
 
     bool ground;
 
@@ -24,6 +25,7 @@ public class Movement : MonoBehaviour
         _rb = GetComponent<Rigidbody2D>();
         _animator = GetComponent<Animator>();
         _spriteRenderer = GetComponent<SpriteRenderer>();
+        health = maxHealth;
     }
 
     // Update is called once per frame
