@@ -16,6 +16,7 @@ public class Enemy : MonoBehaviour
     private Animator anim;
     public GameObject pointA;
     public GameObject pointB;
+    private SpriteRenderer _spriteRenderer;
 
 
     private void Awake()
@@ -30,6 +31,7 @@ public class Enemy : MonoBehaviour
         anim = GetComponent<Animator>();
         target = pointB.transform;
         anim.SetBool("isRunning", true);
+        _spriteRenderer = GetComponent<SpriteRenderer>();
     }
 
     // Update is called once per frame
@@ -39,6 +41,7 @@ public class Enemy : MonoBehaviour
         if(target == pointB.transform)
         {
             _rb.velocity = new Vector2(moveSpeed, _rb.velocity.y);
+            _spriteRenderer.flipX = true;
         }
         else
         {
@@ -48,6 +51,7 @@ public class Enemy : MonoBehaviour
         if (Vector2.Distance(transform.position, target.position) < 0.5f && target == pointB.transform)
         {
             target = pointA.transform;
+            _spriteRenderer.flipX = false;
         }
         if (Vector2.Distance(transform.position, target.position) < 0.5f && target == pointA.transform)
         {
